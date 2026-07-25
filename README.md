@@ -48,6 +48,6 @@ Si deseas desarrollar un sitio web, una landing page o necesitas asesoría para 
 
 Este proyecto se distribuye únicamente con fines de presentación profesional. Todos los derechos reservados ©WeCreate.
 
-![Captura de Pantalla]([https://github.com/Lucer16/Proyecto-Wecreate/blob/b750472601b31c930dc480380cb7917ba689ee10/Wecreate-en-curso-1.png](https://github.com/Lucer16/Wecreate/blob/c3262c7bdc793669ab3a05901b6cd44facf36c18/img/screencapture-wecreatebylucero-2026-07-25-14_59_22.png))
+![Captura de Pantalla](img/screencapture-wecreatebylucero-2026-07-25-14_59_22.png)
 
 
