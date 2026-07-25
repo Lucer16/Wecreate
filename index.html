@@ -1,277 +1,748 @@
 <!DOCTYPE html>
-<html lang="es">
+<html  lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico" type="image/png">
+    <title>WeCreate | Diseño Web Profesional y Estratégico en Panamá</title>
+    <meta name="description" content="En WeCreate diseñamos sitios web de alto rendimiento, tiendas online y mantenimiento técnico. Potencia tu marca con diseño a medida y SEO en Panamá.">
+    <meta name="keywords" content="diseño web panama, desarrollo web, wordpress, ecommerce, mantenimiento web, wecreate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <!-- Bootstrap CSS -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Incluye Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Incluye la fuente Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <meta property="og:title" content="WeCreate | Diseño Web Profesional">
+    <meta property="og:description" content="Tu página, tu universo. Creamos sitios web que convierten visitas en clientes.">
+    <meta property="og:image" content="img/Portada WeCreate 2.png">
+    <meta property="og:url" content="https://wecreatebylucero.com">
+       <!-- Librería Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Fuentes -->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="global.css">
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                cuerpo: ['Inter', 'Poppins', 'sans-serif'],
+                titulos: ['Poppins', 'Inter', 'sans-serif'],
+              },
+              colors: {
+                        fuchsiaCustom: '#d946ef',
+                        fuchsiaDark: '#9333ea',
+                    }
+            },
+          },
+        }
+      </script>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">WeCreate</a>
-            <!-- Botón para abrir el menú lateral -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+<!-- Cuerpo de la página -->
+<body class="text-black-800">
+<header>
+  <nav class="bg-neutral-100/90 backdrop-blur-lg fixed w-full z-50 top-0 start-0 border-b border-gray-200 font-cuerpo text-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-10 h-20 relative">
+      
+      <a href="index.html" class="flex items-center space-x-3">
+        <span class="font-titulos self-center text-2xl font-black whitespace-nowrap tracking-tight text-black">
+          WeCreate<span class="text-fuchsiaCustom">.</span>
+        </span>
+      </a>
+
+      <div class="flex md:order-2 space-x-3 items-center">
+        <button type="button" class="hidden md:block bg-fuchsiaCustom text-white hover:bg-black transition-all duration-300 rounded-[10px] text-[14px] px-6 py-2.5 shadow-lg shadow-fuchsiaCustom/25">
+          <a href="https://wa.me/50763774477">Agendar Cita</a>
+        </button>
+
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center rounded-xl md:hidden hover:bg-fuchsia-100 focus:outline-none">
+          <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <div id="navbar-sticky" class="hidden absolute top-full right-4 w-[65%] sm:w-[50%] md:static md:w-auto md:flex md:order-1 z-50">
+        <ul class="flex flex-col p-4 md:p-0 mt-3 md:mt-0 font-semibold text-[14px] md:flex-row md:space-x-8 bg-white md:bg-transparent rounded-2xl md:rounded-none border border-gray-100 md:border-0 shadow-2xl md:shadow-none items-start md:items-center w-full">
+          <li class="w-full md:w-auto"><a href="https://wecreatebylucero.com/" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Inicio</a></li>
+          <li class="w-full md:w-auto"><a href="sobre-mi.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Sobre mi</a></li>
+          <li class="w-full md:w-auto"><a href="portafolio.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Portafolio</a></li>
+          
+          <li class="relative group w-full md:w-auto border-y border-gray-50 md:border-none">
+            <button id="service-btn" class="flex items-center justify-between w-full py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors md:w-auto cursor-default">
+              Servicios <i class="fa-solid fa-chevron-down ml-2 text-[10px] group-hover:rotate-180 transition-transform duration-300" id="chevron-icon"></i>
             </button>
-            <!-- Menú lateral -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre Mi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Portafolio.html">Portafolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faqs.html">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <div class="d-flex justify-content-end just-btn"> 
-                            <button class="me-3 btn-contact">Agendar Cita</button>
-                        </div>
-                    </ul>
-                </div>
+            
+            <div id="submenu-services" class="md:absolute top-full md:left-1/2 md:-translate-x-1/2 w-full md:w-64 bg-white md:shadow-2xl md:rounded-2xl border border-gray-100 hidden md:group-hover:block z-50 overflow-hidden pt-2">
+                <ul class="py-2 text-sm bg-white">
+                    <li>
+                      <a href="servicios.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-brands fa-wordpress mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Planes de diseño</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="diseño.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-solid fa-code mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Diseño a medida</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="wordpressvscodigo.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all">
+                        <i class="fa-solid fa-arrows-left-right mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Wordpress vs Código</span>
+                      </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </nav>
+          </li>
 
-    <!-- Incluye Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <li class="w-full md:w-auto"><a href="faqs.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">FAQs</a></li>
+          <li class="w-full md:w-auto"><a href="contacto.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-    <!-- Banner -->
-<section class="text-white text-left py-0 m-0" style="background-image: url('img/Portada WeCreate 2.png');">
-    <div class="container banner-text">
-        <div class="transition-container">
-            <p class="lead">¡Tu página, tu universo!</p>
-            <h1 class="display-4">Infinitas opciones</h1>
-            <a class="display-4">para tu marca</a>
-            <button id="btn-cotizacion" class="btn-lg mt-3 btn-cotizacion">Realizar cotización</button>
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('navbar-sticky');
+  const iconMenu = document.getElementById('menu-icon');
+  const serviceBtn = document.getElementById('service-btn');
+  const subMenu = document.getElementById('submenu-services');
+  const chevron = document.getElementById('chevron-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    if (navMenu.classList.contains('hidden')) {
+      navMenu.classList.replace('hidden', 'flex');
+      iconMenu.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      navMenu.classList.replace('flex', 'hidden');
+      iconMenu.classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+
+  serviceBtn.addEventListener('click', (e) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      subMenu.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180');
+    }
+  });
+
+  document.querySelectorAll('#navbar-sticky a:not(#service-btn)').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.replace('flex', 'hidden');
+        iconMenu.classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
+  });
+</script>
+
+<style>
+  body {
+    padding-top: 5rem;
+  }
+
+  html {
+    scroll-padding-top: 5rem;
+  }
+</style>
+
+<!--Banner Principal-->
+<section 
+  class="text-white min-h-[75vh] pt-20 flex justify-start items-center bg-cover bg-no-repeat bg-center md:bg-left"
+  style="background-image: url('img/Portada WeCreate 2.png');"
+>
+    <div class="flex justify-start items-start text-left w-full max-w-7xl mx-auto flex-col px-6 md:pl-[100px]">
+        
+        <div id="transition-container"
+             class="transform -translate-x-full opacity-0 transition-all duration-1000 ease-out">
+
+            <p class="font-inter text-[14px] mb-4">¡Tu página, tu universo!</p>
+
+            <h1 class="font-titulos text-4xl md:text-[50px] font-black leading-tight">
+                Infinitas opciones
+            </h1>
+
+            <a class="font-titulos text-4xl md:text-[50px] font-black leading-tight block">
+                para tu marca
+            </a>
+
+            <button 
+              id="btn-cotizacion"
+              class="bg-black text-white hover:bg-fuchsiaCustom transition-all duration-300 shadow-lg shadow-fuchsiaCustom/25 mt-8 text-[14px] rounded-[10px] px-6 py-3 md:py-2"
+            >
+              <a href="https://wa.me/50763774477" target="_blank">Realizar cotización</a>
+            </button>
+
         </div>
     </div>
 </section>
 
+<script>
+    window.addEventListener("load", () => {
+        const el = document.getElementById("transition-container");
+        el.classList.remove("-translate-x-full", "opacity-0");
+        el.classList.add("translate-x-0", "opacity-100");
+    });
+</script>
 
-    <!-- Sección de características -->
-    <section class="text-white py-0 caract-bg">
-            <div class="container text-center filas-columnas">
-                <p class="lead">Como el espacio, nuestras opciones de diseño son infinitas.</p>
-                <h2 class="mb-4">¡Haz despegar tu negocio con una web hecha a tu medida!</h2>
-                <div class="row d-flex justify-content-center filas">
-                    <div class="col-md-3 col-sm-6 mb-4 columnas">
-                        <img src="img/calidad.svg" alt="Calidad" class="mb-0" style="width: 15px;">
-                        <p class="feature-text">Calidad Garantizada</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-4 columnas">
-                        <img src="img/soporte.svg" alt="Soporte" class="mb-0" style="width: 22px;">
-                        <p class="feature-text">Soporte Post-entrega</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-4 columnas">
-                        <img src="img/experiencia.svg" alt="Experiencia" class="mb-0" style="width: 22px;">
-                        <p class="feature-text">Experiencia Comprobada</p>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-4 columnas">
-                        <img src="img/entregas.svg" alt="Entregas" class="mb-0" style="width: 20px;">
-                        <p class="feature-text">Entregas rápidas</p>
-                    </div>
-                </div>
-            </div>
-    </section>
+<!--Caracteristicas-->
 
-    <!-- Sección de servicios -->
-    <section class="py-5 servicios-container">
-        <div class="container servicios-web">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="subtitulo">Servicios de diseño web</p>
-                    <h2>Diseños que llegan más allá</h2>
-                    <img src="img/cohete.png" alt="Diseño web" class="img-fluid" style="width: 450px;">
-                </div>
-                <div class="col-md-6">
-                    <p>Creamos sitios web que no solo representan a tu negocio, sino que lo llevan a nuevas dimensiones. Adaptados a tus necesidades y a precios accesibles, nuestros servicios te permiten alcanzar las estrellas.</p>
-                    <div class="mb-4 icono-texto">
-                        <img src="img/explorar.svg" alt="Explorar" class="me-3" style="width: 30px;">
-                        <div class="texto-contenido">
-                            <span class="text-bold">Explora nuevas fronteras con diseño adaptable: </span>
-                            <span class="text-format">Tu sitio web se verá genial en cualquier dispositivo.</span>
-                        </div>
-                    </div>
-                    <div class="mb-4 icono-texto">
-                        <img src="img/google.svg" alt="Google" class="me-3" style="width: 30px;">
-                        <div class="texto-contenido">
-                            <span class="text-bold">Optimización SEO para mejorar tu visibilidad: </span>
-                            <span class="text-format"> Como una estrella en el firmamento, serás visible para todos.</span>
-                        </div>
-                    </div>
-                    <div class="mb-4 icono-texto">
-                        <img src="img/actualizacin.svg" alt="Actualización" class="me-3" style="width: 30px;">
-                        <div class="texto-contenido">
-                            <span class="text-bold">Actualización de sitios existentes: </span>
-                            <span class="text-format">Renueva tu web para que brille como una supernova.</span>
-                        </div>
-                    </div>
-                    <div class="mb-4 icono-texto">
-                        <img src="img/monitor.svg" alt="Soporte" class="me-3" style="width: 30px;">
-                        <div class="texto-contenido">
-                            <span class="text-bold">Soporte continuo: </span>
-                            <span class="text-format"> Estamos aquí para ti, incluso después del lanzamiento.</span>
-                        </div>
-                    </div>
-                    <div class="justify-content mb-0">
-                        <p>¡Nuestro compromiso es brindarte soluciones digitales innovadoras que impulsen tu crecimiento! Con un diseño atractivo, optimización efectiva y soporte constante, te ayudamos a destacar en el universo digital.</p>
-                    </div> 
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sección de Tecnologías -->
-        <!-- Título -->
-        <div><h2 class="titulo-tecnologias tecnologias">Tecnologías que usamos</h2></div>
-        <section id="habilidades" class="py-1 habilidades-container">
-            <div class="carrusel-wrapper">
-                <div class="carrusel-container habilidades-a">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" class="devicon-html5-plain icono-habilidades" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="icono-habilidades" data-tecnologia="CSS3" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="icono-habilidades" data-tecnologia="JavaScript" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="icono-habilidades" data-tecnologia="Bootstrap" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="icono-habilidades" data-tecnologia="Tailwind CSS" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="icono-habilidades" data-tecnologia="React" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg" alt="WordPress" class="icono-habilidades" data-tecnologia="WordPress" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Google Console" class="icono-habilidades" data-tecnologia="Google Console" style="color: black; width: 40px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg" alt="Figma" class="icono-habilidades" data-tecnologia="Figma" style="color: black; width: 40px;">
-                </div>
-            </div>
-        </section>
+<div class="bg-black hidden md:block w-full text-center bg-neutral-primary-soft p-7 rounded-base shadow-xs pt-9 pb-9">
 
-    <!-- Sección de testimonios -->
-    <section class="py-5 testimonios">
-        <div class="container text-center">
-            <p class="subtitle-tes">Voces que resplandecen como estrellas</p>
-            <h2 class="mb-5">Testimonios</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card rounded-lg testimonios-card">
-                        <img src="img/sara.svg" class="card-img-top mx-auto mt-3" alt="Sarah H." style="width: 100px;">
-                        <div class="card-body">
-                            <p class="card-text reseña">“¡El mejor servicio para emprendedores! Convirtieron mi idea en un universo de posibilidades.”</p>
-                            <h5 class="card-title">Sarah H.</h5>
-                            <p class="card-text rubro">Tienda de Accesorios</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/carlos.svg" class="card-img-top mx-auto mt-3" alt="Carlos M." style="width: 100px;">
-                        <div class="card-body">
-                            <p class="card-text reseña">“Trabajo rápido, precios justos y atención personalizada. ¡Recomendado!”</p>
-                            <h5 class="card-title">Carlos M.</h5>
-                            <p class="card-text rubro">Propietario de Cafetería</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/maria.svg" class="card-img-top mx-auto mt-3" alt="María R." style="width: 100px;">
-                        <div class="card-body">
-                            <p class="card-text reseña">“¡El servicio fue excepcional desde el primer momento.¡Recomendado al 100%!”</p>
-                            <h5 class="card-title">María R.</h5>
-                            <p class="card-text rubro">Propietaria de Floristería</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
 
-    <script src="scripts.js"></script>
-
-    <!-- Call to Action -->
-    <section class="text-black text-center py-5 bg-callt">
-            <div class="container">
-                <h2>¿Listo para destacar en el mundo digital?</h2>
-                <p class="lead">Explora nuestros paquetes de diseño y descubre cómo podemos darle vida a tus ideas.</p>
-                <a href="servicios.html#planes" class="btn btn-lg btn-callt">Ver planes</a>
-                <p class="mt-3">Empieza tu camino hacia el éxito digital</p>
-            </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white text-black pt-5 pb-5 d-flex justify-content-evenly bg-footer">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-md-3 mb-2">
-                    <h5>WeCreate</h5>
-                    <p>Es un servicio de Desarrollo y Diseño web, creamos experiencias digitales únicas y accesibles para elevar tu marca al siguiente nivel.</p>
-                </div>
-                <div class="col-md-3 mb-2">
-                    <h5>Servicios</h5>
-                    <ul class="list-unstyled">
-                        <li>Desarrollo en Wordpress</li>
-                        <li>Mantenimiento de Webs</li>
-                        <li>Rediseño de Web</li>
-                        <li>Diseño a medida</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-2">
-                    <h5>Sobre Nosotros</h5>
-                    <ul class="list-unstyled">
-                        <li>Planes de Diseño web</li>
-                        <li>Nuestro trabajo</li>
-                        <li>Cotizar ahora</li>
-                        <li>Certificados</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-2">
-                    <h5>Contacto</h5>
-                    <p>info@wecreate.com</p>
-                    <p>+507 6377-4477</p>
-                    <div class="d-flex gap-2 social-icons2">
-                        <a href="https://www.facebook.com/profile.php?id=61565999865901" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/wecreate.pro/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.threads.net/@wecreate.pro" class="social-icon"><i class="fab fa-threads"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=50763774477" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="text-center mt-1 footer">
-        <p>@ WeCreate 2024. Todos los derechos reservados.</p>
+    <div class="font-cuerpo px-4 md:pl-[65px] md:w-1/2 text-left">
+      <p class="mb-2 text-white text-[14px] font-normal">
+        Como el espacio, nuestras opciones de diseño son infinitas.
+      </p>
+      <p class="sm:text-[32px] mb-5 text-white font-black text-2xl leading-tight">
+        ¡Haz despegar tu negocio con una web hecha a tu medida!
+      </p>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="md:flex pr-[65px] md:w-1/2 items-center justify-end">
+      <div class="flex flex-col sm:flex-row items-center justify-end gap-2">
+
+        <a href="#" class="w-full sm:w-auto bg-fuchsia-200 rounded-xl focus:ring-4 focus:outline-none focus:ring-neutral-quaternary text-black inline-flex items-center justify-center px-8 py-3">
+          <svg class="me-2 w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="img">
+            <path fill="currentColor" d="M12 4a5.51 5.51 0 0 0-5.5 5.5c0 2.47 1.49 3.89 2.35 4.5h6.3c.86-.61 2.35-2.03 2.35-4.5C17.5 6.47 15.03 4 12 4" opacity=".3"/>
+            <path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2m-4-5h8v2H8zm4-15C7.86 2 4.5 5.36 4.5 9.5c0 3.82 2.66 5.86 3.77 6.5h7.46c1.11-.64 3.77-2.68 3.77-6.5C19.5 5.36 16.14 2 12 2"/>
+          </svg>
+          <div class="text-left rtl:text-right">
+            <div class="text-xs">Diseño</div>
+            <div class="text-sm font-bold">Moderno</div>
+          </div>
+        </a>
+
+        <a href="#" class="w-full sm:w-auto bg-fuchsia-200 hover:bg-fuchsia-500-strong rounded-xl focus:ring-4 focus:outline-none focus:ring-neutral-quaternary text-black inline-flex items-center justify-center px-8 py-3">
+          <svg class="me-2 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7s2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5a2.5 2.5 0 0 0 0-5"/></svg>
+          <div class="text-left rtl:text-right">
+            <div class="text-xs">Desarrollo</div>
+            <div class="text-sm font-bold">A medida</div>
+          </div>
+        </a>
+
+        <a href="#" class="w-full sm:w-auto bg-fuchsia-200 hover:bg-fuchsia-500-strong rounded-xl focus:ring-4 focus:outline-none focus:ring-neutral-quaternary text-black inline-flex items-center justify-center px-8 py-3">
+          <svg class="me-2 w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m23 12l-2.44-2.79l.34-3.69l-3.61-.82l-1.89-3.2L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5l.34 3.7L1 12l2.44 2.79l-.34 3.7l3.61.82L8.6 22.5l3.4-1.47l3.4 1.46l1.89-3.19l3.61-.82l-.34-3.69zm-12.91 4.72l-3.8-3.81l1.48-1.48l2.32 2.33l5.85-5.87l1.48 1.48z"/></svg>
+          <div class="text-left rtl:text-right">
+            <div class="text-xs">Entregas</div>
+            <div class="text-sm font-bold">Rápidas</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Servicios -->
+<section class="py-12 px-6 md:px-[65px] sm:px-[20px]">
+  
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+    <div class="w-full">
+      <p class=" font-cuerpo text-fuchsia-500 text-[14px] font-medium leading-tight">
+        Servicios de diseño web
+      </p>
+
+      <h2 class="font-titulos text-[32px] md:text-[36px] font-black leading-tight text-black mt-2">
+        Sitios web estratégicos que hacen crecer tu negocio
+      </h2>
+
+      <p class="font-cuerpo text-[14px] mt-4 text-black max-w-md">
+        Diseño, rendimiento y estrategia combinados para convertir visitantes
+        en clientes reales.
+      </p>
+
+      <img
+        src="img/cohete.png"
+        alt="Ilustración de cohete representando crecimiento digital"
+        class="w-[200px] md:w-[288px] mt-6"
+        loading="lazy"
+      >
+      
+      <div class="pt-6">
+        <button
+          id="ctaButton"
+          class="text-[14px] rounded-[10px] px-5 py-2 bg-fuchsia-500 hover:bg-black text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105"
+        >
+          <a href="contacto.html">Comienza tu proyecto hoy</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="font-cuerpo w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div class="font-cuerpo group bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-fuchsia-100 text-fuchsia-600 mb-4 group-hover:scale-110 transition">
+            📱
+          </div>
+          <h3 class="font-bold text-lg mb-2">Diseño responsive</h3>
+          <p class="text-sm text-gray-600">Tu web se adapta perfectamente a móviles, tablets y escritorio.</p>
+        </div>
+
+        <div class="font-cuerpo group bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-fuchsia-100 text-fuchsia-600 mb-4 group-hover:scale-110 transition">
+            🚀
+          </div>
+          <h3 class="font-bold text-lg mb-2">Alto rendimiento</h3>
+          <p class="text-sm text-gray-600">Sitios rápidos, optimizados y listos para convertir visitas en clientes.</p>
+        </div>
+
+        <div class="font-cuerpo group bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-fuchsia-100 text-fuchsia-600 mb-4 group-hover:scale-110 transition">
+            🔍
+          </div>
+          <h3 class="font-bold text-lg mb-2">SEO optimizado</h3>
+          <p class="text-sm text-gray-600">Estructura preparada para destacar en Google desde el inicio.</p>
+        </div>
+
+        <div class="font-cuerpogroup bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-fuchsia-100 text-fuchsia-600 mb-4 group-hover:scale-110 transition">
+            🛠️
+          </div>
+          <h3 class="font-cuerpo font-bold text-lg mb-2">Soporte continuo</h3>
+          <p class="text-sm text-gray-600">Te acompaño incluso después de lanzar tu sitio web.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tecnologías -->
+
+<!-- Sección Tecnologías -->
+<section id="habilidades" class="py-9 bg-neutral-100 overflow-hidden">
+
+  <!-- Título -->
+  <div class="max-w-7xl mx-auto px-6 mb-10">
+    <h2 class="font-titulos text-3xl md:text-4xl font-black text-black">
+      Tecnologías que usamos
+    </h2>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="relative w-full overflow-hidden">
+    <div
+      id="techCarousel"
+      class="flex items-center gap-[64px] animate-scroll"
+    >
+
+      <!-- ICONOS -->
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        alt="HTML5" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        alt="CSS3" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        alt="JavaScript" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        alt="Bootstrap" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        alt="Tailwind CSS" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        alt="React" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg"
+        alt="WordPress" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+        alt="Angular" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg"
+        alt="Figma" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        alt="HTML5" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        alt="CSS3" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        alt="JavaScript" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        alt="Bootstrap" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        alt="Tailwind CSS" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        alt="React" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg"
+        alt="WordPress" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+        alt="Angular" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg"
+        alt="Figma" class="w-10 grayscale hover:grayscale-0 transition">
+
+    </div>
     
-    <!-- Scripts personalizados -->
-    <script src="script.js"></script>
+  </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("techCarousel");
+    carousel.innerHTML += carousel.innerHTML; // duplicado para loop infinito
+  });
+</script>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+</style>
+</section>
+
+<!-- Sección de Testimonios -->
+<section id="testimonios" class="font-cuerpo py-20 bg-fuchsia-200 animate-fade-in-right">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="text-center mb-14">
+      <p class="text-fuchsia-600 font-bold mb-2 text-sm">Voces que resplandecen como estrellas</p>
+      <h2 class="font-titulos text-4xl md:text-5xl font-black text-gray-900">
+          Nuestras <span class="text-fuchsia-600">Reseñas</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+      <div class="bg-fuchsia-50 border border-fuchsia-300 p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-fuchsia-500 text-white font-bold text-lg shadow-sm">
+            IC
+          </div>
+          <div>
+            <h5 class="font-black font-titulos text-gray-900 text-base leading-tight">Itza C.</h5>
+            <p class="text-[11px] text-fuchsia-600 font-bold uppercase tracking-wider">Diseñadora Gráfica</p>
+          </div>
+        </div>
+        
+        <div class="text-fuchsia-500 mb-4 flex gap-0.5 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <p class="text-gray-700 text-base leading-relaxed font-cuerpo italic">
+          “¡El mejor servicio para emprendedores!”
+        </p>
+      </div>
+
+      <div class="bg-fuchsia-50 border border-fuchsia-300 p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-fuchsia-500 text-white font-bold text-lg shadow-sm">
+            KM
+          </div>
+          <div>
+            <h5 class="font-black font-titulos text-gray-900 text-base leading-tight">Kair M.</h5>
+            <p class="text-[11px] text-fuchsia-600 font-bold uppercase tracking-wider">Servicios Contables</p>
+          </div>
+        </div>
+        
+        <div class="text-fuchsia-500 mb-4 flex gap-0.5 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <p class="text-gray-700 text-base leading-relaxed font-cuerpo italic">
+          “Trabajo rápido, precios justos y atención personalizada. ¡Recomendado!”
+        </p>
+      </div>
+
+      <div class="bg-fuchsia-50 border border-fuchsia-300 p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-fuchsia-500 text-white font-bold text-lg shadow-sm">
+            OV
+          </div>
+          <div>
+            <h5 class="font-black font-titulos text-gray-900 text-base leading-tight">Otilia V.</h5>
+            <p class="text-[11px] text-fuchsia-600 font-bold uppercase tracking-wider">Servicios Veterinarios</p>
+          </div>
+        </div>
+        
+        <div class="text-fuchsia-500 mb-4 flex gap-0.5 text-sm">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+
+        <p class="text-gray-700 text-base leading-relaxed font-cuerpo italic">
+          “El servicio fue excepcional desde el primer momento.”
+        </p>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="bg-white/50 backdrop-blur-sm p-1 rounded-full shadow-inner border border-fuchsia-300">
+        <a href="TU_LINK_DE_GOOGLE_AQUI" target="_blank" class="inline-flex items-center gap-3 bg-white hover:bg-gray-50 text-gray-800 px-8 py-3.5 rounded-full font-bold text-sm md:text-base shadow-sm hover:shadow transition-all border border-gray-200">
+          <img src="https://www.google.com/favicon.ico" alt="Google" class="w-4 h-4">
+          Escribir una reseña en Google
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-fuchsia-900/60 font-semibold tracking-wide">¡SÉ EL PRIMERO EN CALIFICARNOS!</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Planes de Servicios -->
+<section id="planes" class="py-16 bg-neutral-100">
+
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <!-- Subtítulo -->
+    <p class="text-fuchsia-500 font-medium tracking-wide mb-2">
+      Órbitas de oportunidad
+    </p>
+
+    <!-- Título -->
+    <h2 class="font-titulos text-3xl md:text-4xl font-black mb-12">
+      Planes de Diseño Web
+    </h2>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- One Page -->
+      <div class="bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+
+        <p class="text-xs text-gray-500 mb-1">Sitio web</p>
+
+        <h3 class="font-black font-titulos text-lg mb-2">
+          One Page
+        </h3>
+
+        <p class="text-3xl font-black text-fuchsia-500 mb-4">
+          $249
+        </p>
+
+        <p class="text-sm text-gray-600 mb-6">
+          Tu presencia online en una sola página, simple, clara y hecha para ayudarte a empezar bien.
+        </p>
+
+        <ul class="text-sm text-gray-700 space-y-2 flex-grow text-left">
+          <li>✔ Diseño Responsivo</li>
+          <li>✔ Hasta 5 productos o servicios</li>
+          <li>✔ Hosting, Dominio y Correo gratis</li>
+          <li>✔ Optimización SEO</li>
+          <li>✔ 30 días de mantenimiento gratis</li>
+          <li>✔ Entrega en 7 días hábiles</li>
+        </ul>
+
+        <a href="contacto.html" class="mt-6 bg-fuchsia-500 hover:bg-black text-white py-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+          Contratar
+        </a>
+      </div>
+
+
+      <!-- Landing Page -->
+      <div class="bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+
+        <p class="text-xs text-gray-500 mb-1">Sitio web</p>
+
+        <h3 class="font-black font-titulos text-lg mb-2">
+          Landing Page
+        </h3>
+
+        <p class="text-3xl font-black text-fuchsia-500 mb-4">
+          $299
+        </p>
+
+        <p class="text-sm text-gray-600 mb-6">
+          Una página diseñada para convertir visitantes en clientes con mensajes claros y acción directa.
+        </p>
+
+        <ul class="text-sm text-gray-700 space-y-2 flex-grow text-left">
+          <li>✔ Hasta 3 páginas web</li>
+          <li>✔ Diseño Responsivo</li>
+          <li>✔ Soporte Técnico</li>
+          <li>✔ Optimización SEO</li>
+          <li>✔ 2 meses de mantenimiento</li>
+          <li>✔ Entrega en 10 días hábiles</li>
+        </ul>
+
+        <a href="contacto.html" class="mt-6 bg-fuchsia-500 hover:bg-black text-white py-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+          Contratar
+        </a>
+      </div>
+
+
+      <!-- Corporativo -->
+      <div class="relative bg-fuchsia-50 border-2 border-fuchsia-500 rounded-2xl p-6 shadow-xl flex flex-col">
+
+        <span class="absolute -top-3 right-4 bg-black text-white text-xs px-3 py-1 rounded-full">
+          Más Popular
+        </span>
+
+        <p class="text-xs text-gray-500 mb-1">Sitio web</p>
+
+        <h3 class="font-black font-titulos text-lg mb-2">
+          Corporativo
+        </h3>
+
+        <p class="text-3xl font-black text-fuchsia-600 mb-4">
+          $349
+        </p>
+
+        <p class="text-sm text-gray-600 mb-6">
+          Tu empresa reflejada con seriedad, confianza y una estructura profesional que hable por ti.
+        </p>
+
+        <ul class="text-sm text-gray-700 space-y-2 flex-grow text-left">
+          <li>✔ Hasta 5 páginas web</li>
+          <li>✔ Diseño Responsivo</li>
+          <li>✔ Soporte Técnico</li>
+          <li>✔ Optimización SEO</li>
+          <li>✔ 3 meses de mantenimiento</li>
+          <li>✔ Entrega en 15 días hábiles</li>
+        </ul>
+
+        <a href="contacto.html" class="mt-6 bg-black hover:bg-fuchsia-600 text-white py-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+          Contratar
+        </a>
+      </div>
+
+
+      <!-- Ecommerce -->
+      <div class="bg-white border border-fuchsia-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+
+        <p class="text-xs text-gray-500 mb-1">Sitio web</p>
+
+        <h3 class="font-black font-titulos text-lg mb-2">
+          Ecommerce
+        </h3>
+
+        <p class="text-3xl font-black text-fuchsia-500 mb-4">
+          $449
+        </p>
+
+        <p class="text-sm text-gray-600 mb-6">
+          Empieza a vender en línea con una tienda bonita, funcional y fácil de gestionar.
+        </p>
+
+        <ul class="text-sm text-gray-700 space-y-2 flex-grow text-left">
+          <li>✔ Páginas ilimitadas</li>
+          <li>✔ Diseño personalizado</li>
+          <li>✔ Soporte prioritario</li>
+          <li>✔ Optimización SEO avanzada</li>
+          <li>✔ 6 meses de mantenimiento</li>
+          <li>✔ Entrega en 21 días hábiles</li>
+        </ul>
+
+        <a href="contacto.html" class="mt-6 bg-fuchsia-500 hover:bg-black text-white py-2 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+          Contratar
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Call to Action -->
+<section class="py-12 text-center text-black bg-fuchsia-200 animate-fade-in-up">
+  <div class="max-w-4xl mx-auto px-6">
+
+    <h2 class="font-titulos text-2xl md:text-3xl font-black mb-4">
+      ¿Listo para destacar en el mundo digital?
+    </h2>
+
+    <p class="text-[14px] font-cuerpo text-black mb-6">
+      Explora nuestros paquetes de diseño y descubre cómo podemos darle vida a tus ideas.
+    </p>
+
+    <a
+      href="https://wa.me/50763774477"
+      class="inline-block bg-black hover:bg-fuchsia-600 text-sm text-white px-10 py-2 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+    >
+      Consultar por WhatsApp
+    </a>
+
+    <p class="font-cuerpo text-[14px] mt-4 text-black">
+      Empieza tu camino hacia el éxito digital
+    </p>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-brand-neutral text-black pt-24 pb-12 px-5 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-gray-300 pb-20">
+        
+        <div class="col-span-1 lg:col-span-1">
+            <h5 class="font-titulos font-black text-3xl mb-6 italic tracking-tight">
+                WeCreate<span class="text-fuchsiaCustom">.</span>
+            </h5>
+            <p class="text-gray-600 leading-relaxed text-[15px]">
+                Elevando el estándar del diseño digital desde Panamá para todo el mundo. Creamos experiencias únicas y accesibles.
+            </p>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Servicios</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="dwordpress.html" class="hover:text-fuchsiaCustom transition-colors">Desarrollo en WordPress</a></li>
+                <li><a href="mantenimiento.html" class="hover:text-fuchsiaCustom transition-colors">Mantenimiento de webs</a></li>
+                <li><a href="diseño.html" class="hover:text-fuchsiaCustom transition-colors">Diseño a medida</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Sobre Nosotros</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="servicios.html" class="hover:text-fuchsiaCustom transition-colors">Planes de diseño web</a></li>
+                <li><a href="portafolio.html" class="hover:text-fuchsiaCustom transition-colors">Nuestros trabajos</a></li>
+                <li><a href="contacto.html" class="hover:text-fuchsiaCustom transition-colors">Cotizar ahora</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Síguenos</h6>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/profile.php?id=61565999865901" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/wecreate.pro/" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=50763774477" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+            <div class="mt-6">
+                <p class="text-sm font-bold text-black">info@wecreatebylucero.com</p>
+                <p class="text-sm text-gray-500">+507 6377-4477</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 text-center text-gray-500 text-sm font-medium">
+        © 2026 WeCreate Digital Studio. Hecho con <span class="text-fuchsiaCustom">♥</span> en Panamá.
+    </div>
+</footer>
 
 </body>
 </html>

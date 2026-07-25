@@ -1,288 +1,497 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico" type="image/png">
+    <title>WeCreate | Lucero Agrazal - Diseño y Desarrollo Web en Panamá</title>
+    <meta name="description" content="Diseño web profesional y desarrollo a medida por Lucero Agrazal. Especialista en UX/UI, WordPress y sitios optimizados para SEO.">
+    <meta name="keywords" content="Diseño web, Desarrollo Frontend, Lucero Agrazal, WeCreate, UX UI, Programador Panamá">
+    <meta name="author" content="Lucero Agrazal">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Incluye Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Incluye la fuente Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <meta property="og:title" content="WeCreate | Diseño y Desarrollo Web">
+    <meta property="og:description" content="Creamos experiencias digitales únicas para elevar tu marca al siguiente nivel.">
+    <meta property="og:image" content="https://wecreatebylucero.com/img/og-image.jpg"> <meta property="og:url" content="https://wecreatebylucero.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">.
+
+    <!-- Librería Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Fuentes -->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="global.css">
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                cuerpo: ['Inter', 'Poppins', 'sans-serif'],
+                titulos: ['Poppins', 'Inter', 'sans-serif'],
+              },
+              colors: {
+                        fuchsiaCustom: '#d946ef',
+                        fuchsiaDark: '#9333ea',
+                    }
+            },
+          },
+        }
+      </script>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">WeCreate</a>
-            <!-- Botón para abrir el menú lateral -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Menú lateral -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre Mi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Portafolio.html">Portafolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faqs.html">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <div class="d-flex justify-content-end just-btn"> 
-                            <button class="me-3 btn-contact">Agendar Cita</button>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Sección de presentación -->
-    <section class="intro d-flex py-5">
-        <div class="container">
-            <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
-                
-                <!-- Columna de Texto -->
-                <div class="col-12 col-md-6 textos">
-                    <div class="fila1">
-                        <p class="titulo py-0">Hola, Soy<br><strong class="sin-negrita">Lucero Agrazal</strong></p>
-                    </div>
-                    <h1 class="sub-titulo">Diseñador y Desarrollador Web</h1>
-                    <p class="descript justify-content pt-3">
-                        Creo sitios web a medida, combinando un diseño atractivo y funcionalidad optimizada. Especialista en UX/UI, Desarrollo Front-end y soluciones adaptadas a las necesidades de cada cliente.
-                    </p>
-                    <div class="iconos-redes mt-3 py-3">
-                        <a href="https://www.linkedin.com/in/lucero-agrazal/" target="_blank" class="icono-social"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/Lucer16?tab=repositories" target="_blank" class="icono-social"><i class="bi bi-github"></i></a>
-                        <a href="https://www.behance.net/luceroagrazal" target="_blank" class="icono-social"><i class="bi bi-behance"></i></a>
-                    </div>
-                </div>
-    
-                <!-- Imagen (Se mueve arriba en móvil) -->
-                <div class="col-12 col-md-6 foto">
-                    <div class="fila2 d-flex justify-content-center">
-                        <img src="img/Foto CV.png" alt="Lucero Agrazal" class="img-lucero rounded-circle pt-2" style="width: 250px; height: 250px;">
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>
-    
-    
+<body class="bg-white text-slate-900 font-cuerpo antialiased">
 
-<!-- Sección de habilidades -->
-    <section id="habilidades" class="py-1 habilidades-container">
-        <div class="carrusel-wrapper">
-            <div class="carrusel-container habilidades-a">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" class="devicon-html5-plain icono-habilidades" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="icono-habilidades" data-tecnologia="CSS3" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="icono-habilidades" data-tecnologia="JavaScript" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="icono-habilidades" data-tecnologia="Bootstrap" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="icono-habilidades" data-tecnologia="Tailwind CSS" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="icono-habilidades" data-tecnologia="React" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg" alt="WordPress" class="icono-habilidades" data-tecnologia="WordPress" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt="Google Console" class="icono-habilidades" data-tecnologia="Google Console" style="color: black; width: 40px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg" alt="Figma" class="icono-habilidades" data-tecnologia="Figma" style="color: black; width: 40px;">
-            </div>
-        </div>
-    </section>
-    
-    
-    <section id="proyectos" class="py-5 px-5 servicios-h">
-        <div class="container text-center">
-            <h2 class="title-section">Habilidades Profesionales</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-code-slash"></i>
-                        <h3 class="titulo-text">Desarrollo desde cero</h3>
-                        <p class="descripción-text">Creación de sitios web únicos y funcionales.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-palette"></i>
-                        <h3 class="titulo-text">Diseño UX/UI</h3>
-                        <p class="descripción-text">Experiencias intuitivas y atractivas para usuarios.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-wrench-adjustable"></i>
-                        <h3 class="titulo-text">Mantenimiento</h3>
-                        <p class="descripción-text">Actualización y soporte continuo para tu sitio web.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-speedometer2"></i>
-                        <h3 class="titulo-text">Optimización</h3>
-                        <p class="descripción-text">Mejor rendimiento y velocidad de carga para generar más vistas.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-search"></i>
-                        <h3 class="titulo-text">SEO One-Page</h3>
-                        <p class="descripción-text">Posicionamiento web para mayor visibilidad online.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="proyecto">
-                        <i class="bi bi-cart"></i>
-                        <h3 class="titulo-text">Tiendas Ecommerce</h3>
-                        <p class="descripción-text">Creación de tiendas online personalizadas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+  <nav class="bg-neutral-100/90 backdrop-blur-lg fixed w-full z-50 top-0 start-0 border-b border-gray-200 font-cuerpo text-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-10 h-20 relative">
+      
+      <a href="index.html" class="flex items-center space-x-3">
+        <span class="font-titulos self-center text-2xl font-black whitespace-nowrap tracking-tight text-black">
+          WeCreate<span class="text-fuchsiaCustom">.</span>
+        </span>
+      </a>
 
-    <section id="experiencia" class="py-5 px-5 bg-light">
-        <div class="container">
-            <div class="contenedor-experiencia">
-                <!-- Sección de títulos -->
-                <div class="titulos-cont">
-                    <h2 class="experiencia-title">Formación y Experiencia</h2>
-                    <p class="experiencia-subtitle">Mi objetivo es seguir innovando y aportando valor con soluciones creativas y accesibles.</p>
-                </div>
-    
-                <!-- Educación -->
-                <div class="educacion">
-                    <h2 class="text-section">EDUCACIÓN</h2>
-                    <div class="item">
-                        <i class="bi bi-mortarboard-fill"></i>
-                        <h2 class="titulo-ed">Licenciatura en Informática para la Gestión Educativa y Empresarial</h2>
-                    </div>
-                    <div class="item">
-                        <i class="bi bi-mortarboard-fill"></i>
-                        <h2 class="titulo-ed">Maestría en Ingeniería de Software</h2>
-                    </div>
-                </div>
-    
-                <!-- Certificaciones -->
-                <div class="certificaciones">
-                    <h2 class="text-section">CERTIFICACIONES</h2>
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <h2 class="titulo-ed">Certificación en Desarrollo Front-end</h2>
-                    </div>
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <h2 class="titulo-ed">Certificación en Desarrollo Back-end</h2>
-                    </div>
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <h2 class="titulo-ed">Certificación en Diseño UX/UI</h2>
-                    </div>
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <h2 class="titulo-ed">Certificación en Desarrollo de Sitios Web Responsivos</h2>
-                    </div>
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <h2 class="titulo-ed">Certificación en Desarrollo de JavaScript</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    
-    
-    <!-- Sección de contacto -->
-    <section id="contacto" class="py-5 bg-black text-white contactos-cont">
-        <div class="container text-center contactos">
-            <h2>Contacto</h2>
-            <p>¿Quieres trabajar conmigo? Escríbeme.</p>
-            <form>
-                <input type="text" class="form-control mb-2" placeholder="Tu Nombre">
-                <input type="email" class="form-control mb-2" placeholder="Tu Correo">
-                <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
-                <button type="submit" class="btn-contacto">Enviar</button>
-            </form>
-        </div>
-    </section>
+      <div class="flex md:order-2 space-x-3 items-center">
+        <button type="button" class="hidden md:block bg-fuchsiaCustom text-white hover:bg-black transition-all duration-300 rounded-[10px] text-[14px] px-6 py-2.5 shadow-lg shadow-fuchsiaCustom/25">
+          <a href="https://wa.me/50763774477">Agendar Cita</a>
+        </button>
 
-    <!-- Incluye Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="icons-habilidades.js"></script>
-    
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center rounded-xl md:hidden hover:bg-fuchsia-100 focus:outline-none">
+          <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <div id="navbar-sticky" class="hidden absolute top-full right-4 w-[65%] sm:w-[50%] md:static md:w-auto md:flex md:order-1 z-50">
+        <ul class="flex flex-col p-4 md:p-0 mt-3 md:mt-0 font-semibold text-[14px] md:flex-row md:space-x-8 bg-white md:bg-transparent rounded-2xl md:rounded-none border border-gray-100 md:border-0 shadow-2xl md:shadow-none items-start md:items-center w-full">
+          <li class="w-full md:w-auto"><a href="https://wecreatebylucero.com/" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Inicio</a></li>
+          <li class="w-full md:w-auto"><a href="sobre-mi.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Sobre mi</a></li>
+          <li class="w-full md:w-auto"><a href="portafolio.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Portafolio</a></li>
           
-<!-- Footer -->
-<footer class="bg-white text-black pt-5 pb-5 d-flex justify-content-evenly bg-footer">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-md-3 mb-2">
-                <h5>WeCreate</h5>
-                <p>Es un servicio de Desarrollo y Diseño web, creamos experiencias digitales únicas y accesibles para elevar tu marca al siguiente nivel.</p>
-            </div>
-            <div class="col-md-3 mb-2">
-                <h5>Servicios</h5>
-                <ul class="list-unstyled">
-                    <li>Desarrollo en Wordpress</li>
-                    <li>Mantenimiento de Webs</li>
-                    <li>Rediseño de Web</li>
-                    <li>Diseño a medida</li>
+          <li class="relative group w-full md:w-auto border-y border-gray-50 md:border-none">
+            <button id="service-btn" class="flex items-center justify-between w-full py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors md:w-auto cursor-default">
+              Servicios <i class="fa-solid fa-chevron-down ml-2 text-[10px] group-hover:rotate-180 transition-transform duration-300" id="chevron-icon"></i>
+            </button>
+            
+            <div id="submenu-services" class="md:absolute top-full md:left-1/2 md:-translate-x-1/2 w-full md:w-64 bg-white md:shadow-2xl md:rounded-2xl border border-gray-100 hidden md:group-hover:block z-50 overflow-hidden pt-2">
+                <ul class="py-2 text-sm bg-white">
+                    <li>
+                      <a href="servicios.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-brands fa-wordpress mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Planes de diseño</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="diseño.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-solid fa-code mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Diseño a medida</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="wordpressvscodigo.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all">
+                        <i class="fa-solid fa-arrows-left-right mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Wordpress vs Código</span>
+                      </a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-md-3 mb-2">
-                <h5>Sobre Nosotros</h5>
-                <ul class="list-unstyled">
-                    <li>Planes de Diseño web</li>
-                    <li>Nuestro trabajo</li>
-                    <li>Cotizar ahora</li>
-                    <li>Certificados</li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-2">
-                <h5>Contacto</h5>
-                <p>info@wecreate.com</p>
-                <p>+507 6377-4477</p>
-                <div class="d-flex gap-2 social-icons2">
-                    <a href="https://www.facebook.com/profile.php?id=61565999865901" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/wecreate.pro/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.threads.net/@wecreate.pro" class="social-icon"><i class="fab fa-threads"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=50763774477" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </li>
+
+          <li class="w-full md:w-auto"><a href="faqs.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">FAQs</a></li>
+          <li class="w-full md:w-auto"><a href="contacto.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('navbar-sticky');
+  const iconMenu = document.getElementById('menu-icon');
+  const serviceBtn = document.getElementById('service-btn');
+  const subMenu = document.getElementById('submenu-services');
+  const chevron = document.getElementById('chevron-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    if (navMenu.classList.contains('hidden')) {
+      navMenu.classList.replace('hidden', 'flex');
+      iconMenu.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      navMenu.classList.replace('flex', 'hidden');
+      iconMenu.classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+
+  serviceBtn.addEventListener('click', (e) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      subMenu.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180');
+    }
+  });
+
+  document.querySelectorAll('#navbar-sticky a:not(#service-btn)').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.replace('flex', 'hidden');
+        iconMenu.classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
+  });
+</script>
+
+<style>
+  body {
+    padding-top: 5rem;
+  }
+
+  html {
+    scroll-padding-top: 5rem;
+  }
+</style>
+
+<section id="inicio" class="relative pt-24 pb-16 lg:pt-12 lg:pb-32 px-[70px]">
+    <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+        <div class="w-full lg:w-3/5 text-center lg:text-left">
+            <span class="inline-block py-1.5 rounded-full bg-fuchsia-50 text-fuchsiaCustom text-lg font-bold mb-4">Disponible para proyectos</span>
+            <h1 class="font-titulos text-4xl sm:text-5xl lg:text-7xl font-black text-black leading-[1.1] mb-6">
+                Diseño y <span class="text-fuchsiaCustom italic">Desarrollo</span> Web Profesional
+            </h1>
+            <p class="text-slate-500 font-cuerpo text-sm mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed sm:text-sm">
+                Hola, soy <span class="font-bold text-black">Lucero Agrazal</span>. Ayudo a marcas y negocios a destacar en el mundo digital con sitios web de alto impacto.
+            </p>
+            <div class="flex flex-col sm:flex-row font-cuerpo justify-center lg:justify-start gap-4 mb-10">
+                <a href="#contacto" class="px-8 py-4 bg-black text-white rounded-2xl font-bold hover:bg-fuchsiaCustom transition-all duration-300 text-center">Empezar Proyecto</a>
+                <div class="flex items-center justify-center gap-6 text-2xl">
+                    <a href="https://linkedin.com" target="_blank" class="text-slate-400 hover:text-fuchsiaCustom transition"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" class="text-slate-400 hover:text-fuchsiaCustom transition"><i class="bi bi-github"></i></a>
+                    <a href="https://behance.net" target="_blank" class="text-slate-400 hover:text-fuchsiaCustom transition"><i class="bi bi-behance"></i></a>
                 </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-2/5 flex justify-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-fuchsia-100 rounded-full z-0 animate-pulse"></div>
+                <img src="img/Foto CV.png" alt="Lucero Agrazal - Desarrollador Web" class="img-lucero relative z-10 rounded-[3rem] w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover object-top">
             </div>
         </div>
     </div>
+</section>
+
+<!-- Tecnologías -->
+
+<!-- Sección Tecnologías -->
+<section id="habilidades" class="py-9 bg-neutral-100 overflow-hidden">
+
+  <!-- Título -->
+  <div class="max-w-7xl mx-auto px-6 mb-10">
+    <h2 class="font-titulos text-3xl md:text-4xl font-black text-black">
+      Tecnologías que usamos
+    </h2>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="relative w-full overflow-hidden">
+    <div
+      id="techCarousel"
+      class="flex items-center gap-[64px] animate-scroll"
+    >
+
+      <!-- ICONOS -->
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        alt="HTML5" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        alt="CSS3" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        alt="JavaScript" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        alt="Bootstrap" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        alt="Tailwind CSS" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        alt="React" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg"
+        alt="WordPress" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+        alt="Angular" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg"
+        alt="Figma" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        alt="HTML5" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        alt="CSS3" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        alt="JavaScript" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        alt="Bootstrap" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        alt="Tailwind CSS" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        alt="React" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg"
+        alt="WordPress" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+        alt="Angular" class="w-10 grayscale hover:grayscale-0 transition">
+
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-plain.svg"
+        alt="Figma" class="w-10 grayscale hover:grayscale-0 transition">
+
+    </div>
+    
+  </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("techCarousel");
+    carousel.innerHTML += carousel.innerHTML; // duplicado para loop infinito
+  });
+</script>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+</style>
+</section>
+
+
+<section id="servicios" class="py-16 px-5 bg-neutral-100">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-12 text-center">
+            <h2 class="font-titulos text-3xl md:text-[32px] font-black mb-3 italic leading-tight">Lo que puedo hacer por ti</h2>
+            <div class="h-1 w-16 bg-fuchsiaCustom rounded-full mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-code text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">Desarrollo desde cero</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Creación de sitios web únicos y funcionales.</p>
+            </div>
+
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-pen-nib text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">Diseño UX/UI</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Experiencias intuitivas y atractivas para usuarios.</p>
+            </div>
+
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-gears text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">Mantenimiento</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Actualización y soporte continuo para tu sitio.</p>
+            </div>
+
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-gauge-high text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">Optimización</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Mejor rendimiento y velocidad de carga.</p>
+            </div>
+
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-magnifying-glass text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">SEO One-Page</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Posicionamiento web para mayor visibilidad.</p>
+            </div>
+
+            <div class="group bg-white p-7 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="w-12 h-12 bg-fuchsia-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-fuchsiaCustom transition-colors duration-300">
+                    <i class="fa-solid fa-cart-shopping text-xl text-fuchsiaCustom group-hover:text-white"></i>
+                </div>
+                <h3 class="font-titulos text-lg font-bold mb-2">Tiendas Ecommerce</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Creación de tiendas online personalizadas.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--- Call to action --->
+<section id="contacto-directo" class="py-24 bg-slate-950 border-t border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6 shadow-sm">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsiaCustom opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-fuchsiaCustom"></span>
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-300">Disponible ahora</span>
+        </div>
+        
+        <h2 class="font-titulos text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          ¿Listo para transformar <br>
+          <span class="text-fuchsiaCustom italic">tu presencia digital?</span>
+        </h2>
+        
+        <p class="font-cuerpo text-lg text-slate-400 leading-relaxed mb-10 max-w-xl">
+          Combinemos tu visión con mi experiencia en diseño y desarrollo para crear un sitio web que no solo destaque, sino que convierta visitantes en clientes.
+        </p>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-4 group">
+            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shadow-sm group-hover:border-fuchsiaCustom transition-colors">
+              <i class="fa-solid fa-envelope text-fuchsiaCustom"></i>
+            </div>
+            <span class="font-bold text-slate-200">info@wecreatebylucero.com</span>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shadow-sm group-hover:border-fuchsiaCustom transition-colors">
+              <i class="fa-solid fa-location-dot text-fuchsiaCustom"></i>
+            </div>
+            <span class="font-bold text-slate-200">Panamá, Ciudad de Panamá</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <div class="w-full max-w-md bg-white p-10 rounded-[2.5rem] border border-gray-200 shadow-2xl shadow-fuchsiaCustom/5">
+          <h3 class="font-titulos text-2xl font-black text-black mb-6">Iniciemos hoy</h3>
+          
+          <div class="flex flex-col gap-4">
+            <a href="https://api.whatsapp.com/send?phone=50763774477&text=Hola%20Lucero,%20me%20gustaría%20iniciar%20un%20proyecto" 
+               target="_blank" 
+               class="flex items-center justify-center gap-3 bg-fuchsiaCustom text-white py-5 rounded-2xl font-black text-lg hover:bg-black transition-all duration-300 shadow-lg shadow-fuchsiaCustom/25">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              Enviar Mensaje
+            </a>
+            
+            <a href="contacto.html" 
+               class="flex items-center justify-center gap-3 bg-neutral-100 text-black py-5 rounded-2xl font-black text-lg hover:bg-gray-200 transition-all duration-300">
+              <i class="fa-solid fa-calendar-days"></i>
+              Agendar Cita
+            </a>
+          </div>
+
+          <p class="text-center mt-6 text-xs text-gray-400 font-medium">
+            Respuesta rápida garantizada por WhatsApp
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-brand-neutral text-black pt-24 pb-12 px-5 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-gray-300 pb-20">
+        
+        <div class="col-span-1 lg:col-span-1">
+            <h5 class="font-titulos font-black text-3xl mb-6 italic tracking-tight">
+                WeCreate<span class="text-fuchsiaCustom">.</span>
+            </h5>
+            <p class="text-gray-600 leading-relaxed text-[15px]">
+                Elevando el estándar del diseño digital desde Panamá para todo el mundo. Creamos experiencias únicas y accesibles.
+            </p>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Servicios</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="dwordpress.html" class="hover:text-fuchsiaCustom transition-colors">Desarrollo en WordPress</a></li>
+                <li><a href="mantenimiento.html" class="hover:text-fuchsiaCustom transition-colors">Mantenimiento de webs</a></li>
+                <li><a href="diseño.html" class="hover:text-fuchsiaCustom transition-colors">Diseño a medida</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Sobre Nosotros</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="servicios.html" class="hover:text-fuchsiaCustom transition-colors">Planes de diseño web</a></li>
+                <li><a href="portafolio.html" class="hover:text-fuchsiaCustom transition-colors">Nuestros trabajos</a></li>
+                <li><a href="contacto.html" class="hover:text-fuchsiaCustom transition-colors">Cotizar ahora</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Síguenos</h6>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/profile.php?id=61565999865901" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/wecreate.pro/" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=50763774477" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+            <div class="mt-6">
+                <p class="text-sm font-bold text-black">info@wecreatebylucero.com</p>
+                <p class="text-sm text-gray-500">+507 6377-4477</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 text-center text-gray-500 text-sm font-medium">
+        © 2026 WeCreate Digital Studio. Hecho con <span class="text-fuchsiaCustom">♥</span> en Panamá.
+    </div>
 </footer>
 
-<div class="text-center mt-1 footer">
-    <p>@ WeCreate 2024. Todos los derechos reservados.</p>
-</div>
+<script>
+    // Lógica menú móvil con animación suave
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-link');
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-<!-- Scripts personalizados -->
-<script src="script.js"></script>
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('bi-list');
+        icon.classList.toggle('bi-x-lg');
+    });
+
+    // Cerrar menú al hacer clic en un link
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('open');
+            btn.querySelector('i').classList.add('bi-list');
+            btn.querySelector('i').classList.remove('bi-x-lg');
+        });
+    });
+</script>
 
 </body>
 </html>

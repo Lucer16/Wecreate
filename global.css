@@ -1,0 +1,42 @@
+/* DIRECTIVAS DE TAILWIND */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DEFINICIÓN DE VARIABLES CSS PERSONALIZADAS */
+/* Definimos las variables de estilo a nivel global usando :root */
+:root {
+  /* Paleta de Colores */
+  --color-brand-500: #E94DD5;   /* Azul Primario (similar a blue-500) */
+  --color-brand-700: #FFC1FB;   /* Azul Oscuro (similar a blue-700) */
+  --color-fondo: #F6F5F5;       /* Gris claro */
+
+  /* Tipografía */
+  --font-heading: 'Inter';
+  --font-body: 'Inter', sans-serif;
+
+  /* Sombra */
+  --shadow-elevacion: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+/* Oculta scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { display: none; } /* WebKit */ 
+
+/* ESTILOS BASE */
+/* Aplicamos las variables CSS a los elementos base del HTML */
+body {
+  /* Usar una de nuestras variables de fondo */
+  background-color: var(--color-fondo); 
+  
+  /* Usar una de nuestras variables de tipografía */
+  font-family: var(--font-body); 
+  
+  /* Reset básicos */
+  margin: 0;
+  padding: 0;
+}
+

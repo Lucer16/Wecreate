@@ -1,178 +1,317 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html  lang="es">
+    <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico" type="image/png">
+    <title>Preguntas Frecuentes sobre Diseño Web | Soporte y Precios | WeCreate</title>
+    <meta name="description" content="¿Dudas sobre tu próximo sitio web? Resolvemos tus preguntas sobre hosting gratis, tecnología WordPress, plazos de entrega y garantías de diseño web en Panamá.">
+    <meta name="keywords" content="preguntas diseño web, precio hosting panamá, tiempo entrega página web, garantías diseño digital, soporte wordpress panamá, wecreate faqs">
+    <meta name="author" content="WeCreate Digital Studio">
+    <link rel="canonical" href="https://wecreatebylucero.com/faqs.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wecreatebylucero.com/faqs.html">
+    <meta property="og:title" content="Resolvemos tus dudas sobre Diseño y Desarrollo Web | WeCreate">
+    <meta property="og:description" content="Información transparente sobre hosting, dominio, pagos y tiempos de entrega para tu proyecto digital.">
+    <meta property="og:image" content="https://wecreatebylucero.com/img/og-faqs.jpg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Preguntas Frecuentes - WeCreate Digital Studio">
+    <meta name="twitter:description" content="Todo lo que necesitas saber antes de empezar tu página web.">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeCreate</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Incluye Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Incluye la fuente Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <!-- Librería Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Fuentes -->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="global.css">
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                cuerpo: ['Inter', 'Poppins', 'sans-serif'],
+                titulos: ['Poppins', 'Inter', 'sans-serif'],
+              },
+              colors: {
+                        fuchsiaCustom: '#d946ef',
+                        fuchsiaDark: '#9333ea',
+                    }
+            },
+          },
+        }
+      </script>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">WeCreate</a>
-            <!-- Botón para abrir el menú lateral -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Menú lateral -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre-mi.html">Sobre Mi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Portafolio.html">Portafolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faqs.html">FAQs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                        <div class="d-flex justify-content-end just-btn"> 
-                            <button class="me-3 btn-contact">Agendar Cita</button>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<!-- Cuerpo de la página -->
+<body class="text-black-800">
+<header>
+  <nav class="bg-neutral-100/90 backdrop-blur-lg fixed w-full z-50 top-0 start-0 border-b border-gray-200 font-cuerpo text-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-10 h-20 relative">
+      
+      <a href="index.html" class="flex items-center space-x-3">
+        <span class="font-titulos self-center text-2xl font-black whitespace-nowrap tracking-tight text-black">
+          WeCreate<span class="text-fuchsiaCustom">.</span>
+        </span>
+      </a>
 
-    <div class="container faq-container py-5 preguntas-frecuentes">
-        <h2 class="faq-title mb-4 title-faqs">Preguntas Frecuentes</h2>
+      <div class="flex md:order-2 space-x-3 items-center">
+        <button type="button" class="hidden md:block bg-fuchsiaCustom text-white hover:bg-black transition-all duration-300 rounded-[10px] text-[14px] px-6 py-2.5 shadow-lg shadow-fuchsiaCustom/25">
+          <a href="https://wa.me/50763774477">Agendar Cita</a>
+        </button>
+
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center rounded-xl md:hidden hover:bg-fuchsia-100 focus:outline-none">
+          <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <div id="navbar-sticky" class="hidden absolute top-full right-4 w-[65%] sm:w-[50%] md:static md:w-auto md:flex md:order-1 z-50">
+        <ul class="flex flex-col p-4 md:p-0 mt-3 md:mt-0 font-semibold text-[14px] md:flex-row md:space-x-8 bg-white md:bg-transparent rounded-2xl md:rounded-none border border-gray-100 md:border-0 shadow-2xl md:shadow-none items-start md:items-center w-full">
+          <li class="w-full md:w-auto"><a href="https://wecreatebylucero.com/" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Inicio</a></li>
+          <li class="w-full md:w-auto"><a href="sobre-mi.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Sobre mi</a></li>
+          <li class="w-full md:w-auto"><a href="portafolio.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Portafolio</a></li>
+          
+          <li class="relative group w-full md:w-auto border-y border-gray-50 md:border-none">
+            <button id="service-btn" class="flex items-center justify-between w-full py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors md:w-auto cursor-default">
+              Servicios <i class="fa-solid fa-chevron-down ml-2 text-[10px] group-hover:rotate-180 transition-transform duration-300" id="chevron-icon"></i>
+            </button>
+            
+            <div id="submenu-services" class="md:absolute top-full md:left-1/2 md:-translate-x-1/2 w-full md:w-64 bg-white md:shadow-2xl md:rounded-2xl border border-gray-100 hidden md:group-hover:block z-50 overflow-hidden pt-2">
+                <ul class="py-2 text-sm bg-white">
+                    <li>
+                      <a href="servicios.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-brands fa-wordpress mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Planes de diseño</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="diseño.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all border-b border-gray-50">
+                        <i class="fa-solid fa-code mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Diseño a medida</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="wordpressvscodigo.html" class="flex items-center px-5 py-4 text-gray-700 hover:bg-fuchsia-50 hover:text-fuchsiaCustom transition-all">
+                        <i class="fa-solid fa-arrows-left-right mr-3 text-fuchsiaCustom text-lg"></i> 
+                        <span class="font-bold">Wordpress vs Código</span>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+          </li>
+
+          <li class="w-full md:w-auto"><a href="faqs.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">FAQs</a></li>
+          <li class="w-full md:w-auto"><a href="contacto.html" class="block py-3 px-4 md:p-0 hover:text-fuchsiaCustom transition-colors rounded-xl md:rounded-none hover:bg-fuchsia-50 md:hover:bg-transparent">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('navbar-sticky');
+  const iconMenu = document.getElementById('menu-icon');
+  const serviceBtn = document.getElementById('service-btn');
+  const subMenu = document.getElementById('submenu-services');
+  const chevron = document.getElementById('chevron-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    if (navMenu.classList.contains('hidden')) {
+      navMenu.classList.replace('hidden', 'flex');
+      iconMenu.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      navMenu.classList.replace('flex', 'hidden');
+      iconMenu.classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+
+  serviceBtn.addEventListener('click', (e) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      subMenu.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180');
+    }
+  });
+
+  document.querySelectorAll('#navbar-sticky a:not(#service-btn)').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.replace('flex', 'hidden');
+        iconMenu.classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
+  });
+</script>
+
+<style>
+  body {
+    padding-top: 5rem;
+  }
+
+  html {
+    scroll-padding-top: 5rem;
+  }
+</style>
+
+<section class="py-20 bg-white font-cuerpo">
+  <div class="max-w-4xl mx-auto px-6">
+    
+    <div class="text-center mb-16">
+      <h2 class="font-titulos text-3xl md:text-4xl font-black text-gray-900 mb-4">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-slate-500 font-cuerpo">Todo lo que necesitas saber sobre cómo trabajamos en <span class="text-fuchsiaCustom font-bold">wecreate</span>.</p>
+    </div>
+
+    <div class="font-cuerpo space-y-4">
+      
+      <details class="group border border-slate-200 rounded-2xl bg-slate-50 overflow-hidden shadow-sm transition-all duration-300 open:bg-white open:shadow-md">
+        <summary class="font-cuerpo flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+          <span>¿Qué tecnología utilizan para crear mi web?</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-fuchsiaCustom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor font-bold">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+          En <span class="font-semibold">wecreate</span> nos especializamos en WordPress y Elementor Pro por su versatilidad y facilidad de uso. Sin embargo, si buscas algo más técnico o específico, también desarrollamos proyectos a medida utilizando <span class="text-fuchsiaCustom">HTML, Bootstrap, Tailwind CSS y TypeScript</span>.
+        </div>
+      </details>
+
+      <details class="group border border-slate-200 rounded-2xl bg-slate-50 overflow-hidden shadow-sm transition-all duration-300 open:bg-white open:shadow-md">
+        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+          <span>¿Podré editar mi sitio yo mismo?</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-fuchsiaCustom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+          ¡Totalmente! Nuestra meta es que seas independiente. Al finalizar el proyecto, te entregamos tus accesos y <span class="font-semibold text-fuchsiaCustom text-sm uppercase tracking-wider">te capacitamos</span> para que aprendas a cambiar textos, fotos y secciones en minutos, sin pagar mantenimiento externo por cambios sencillos.
+        </div>
+      </details>
+
+      <details class="group border border-slate-200 rounded-2xl bg-slate-50 overflow-hidden shadow-sm transition-all duration-300 open:bg-white open:shadow-md">
+        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+          <span>¿Cómo funcionan el hosting y el dominio?</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-fuchsiaCustom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+          <p class="mb-3">El primer año es <span class="font-cuerpo text-fuchsia-700 font-bold uppercase">Gratis.</span> Incluye servidor de alta velocidad, 1 dominio, 5 correos corporativos y SSL.</p>
+          <p>A partir del segundo año, la renovación es de <span class="font-bold text-black">$75 USD/año</span>. No hay letras pequeñas ni contratos de permanencia: la web es tuya.</p>
+        </div>
+      </details>
+
+      <details class="group border border-slate-200 rounded-2xl bg-slate-50 overflow-hidden shadow-sm transition-all duration-300 open:bg-white open:shadow-md">
+        <summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+          <span>¿Cuáles son los plazos de entrega?</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-fuchsiaCustom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+          <ul class="space-y-2 list-disc list-inside">
+            <li><span class="font-semibold text-gray-800">Landing Page:</span> 10 días hábiles.</li>
+            <li><span class="font-semibold text-gray-800">Web Corporativa:</span> 15 días hábiles.</li>
+            <li><span class="font-semibold text-gray-800">E-commerce:</span> 21 días hábiles.</li>
+          </ul>
+          <p class="mt-4 text-xs italic">Tiempos válidos una vez recibida toda la información inicial.</p>
+        </div>
+      </details>
+
+      <details class="group border border-slate-200 rounded-2xl bg-slate-50 overflow-hidden shadow-sm transition-all duration-300 open:bg-white open:shadow-md">
+        <summary class="font-cuerpo flex justify-between items-center p-6 cursor-pointer list-none font-bold text-gray-800">
+          <span>¿Cómo se gestionan los pagos y garantías?</span>
+          <span class="transition-transform duration-300 group-open:rotate-180 text-fuchsiaCustom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="font-cuerpo px-6 pb-6 text-slate-600 leading-relaxed">
+          <p class="mb-4 text-gray-900 font-semibold">💳 Pago: 50% al inicio y 50% al finalizar (ahorro de $30 si pagas el total al inicio).</p>
+          <div class="space-y-3">
+            <div class="font-cuerpo p-3 bg-white rounded-lg border-l-4 border-fuchsiaCustom">
+              <p class="font-black font-cuerpo text-fuchsiaCustom">Garantía Triple</p>
+              <p class="text-sm">Bonificación por demora, 30 días de soporte post-entrega y <span class="font-bold underline">3 años de protección técnica</span> ante incidentes de seguridad.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="font-cuerpo bg-brand-neutral text-black pt-24 pb-12 px-5 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-b border-gray-300 pb-20">
         
-        <div class="accordion" id="faqAccordion">
-            <!-- Pregunta 1 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faq1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                        <i class="bi bi-question-circle-fill me-2"></i> ¿Cómo puedo contactarlos?
-                    </button>
-                </h2>
-                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Puedes contactarnos a través del formulario en nuestra página de contacto, enviarnos un correo a <strong>contacto@tuempresa.com</strong> o llamarnos al <strong>+507 123 4567</strong>.
-                    </div>
-                </div>
+        <div class="col-span-1 lg:col-span-1">
+            <h5 class="font-titulos font-black text-3xl mb-6 italic tracking-tight">
+                WeCreate<span class="text-fuchsiaCustom">.</span>
+            </h5>
+            <p class="text-gray-600 leading-relaxed text-[15px]">
+                Elevando el estándar del diseño digital desde Panamá para todo el mundo. Creamos experiencias únicas y accesibles.
+            </p>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Servicios</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="dwordpress.html" class="hover:text-fuchsiaCustom transition-colors">Desarrollo en WordPress</a></li>
+                <li><a href="mantenimiento.html" class="hover:text-fuchsiaCustom transition-colors">Mantenimiento de webs</a></li>
+                <li><a href="diseño.html" class="hover:text-fuchsiaCustom transition-colors">Diseño a medida</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Sobre Nosotros</h6>
+            <ul class="space-y-4 text-gray-600 text-[15px]">
+                <li><a href="servicios.html" class="hover:text-fuchsiaCustom transition-colors">Planes de diseño web</a></li>
+                <li><a href="portafolio.html" class="hover:text-fuchsiaCustom transition-colors">Nuestros trabajos</a></li>
+                <li><a href="contacto.html" class="hover:text-fuchsiaCustom transition-colors">Cotizar ahora</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h6 class="font-bold text-lg mb-6 font-titulos">Síguenos</h6>
+            <div class="flex gap-4">
+                <a href="https://www.facebook.com/profile.php?id=61565999865901" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/wecreate.pro/" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=50763774477" 
+                   class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white hover:bg-fuchsiaCustom transition duration-300 shadow-lg shadow-black/5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
             </div>
-    
-            <!-- Pregunta 2 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faq2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                        <i class="bi bi-question-circle-fill me-2"></i> ¿Cuánto tiempo tardan en responder?
-                    </button>
-                </h2>
-                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Normalmente respondemos en un plazo de <strong>24 a 48 horas</strong> hábiles. Si es urgente, te recomendamos llamarnos directamente.
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Pregunta 3 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faq3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                        <i class="bi bi-question-circle-fill me-2"></i> ¿Ofrecen soporte después de la compra?
-                    </button>
-                </h2>
-                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Sí, ofrecemos <strong>soporte gratuito por 30 días</strong> después de la compra. Si necesitas soporte extendido, contáctanos para más información.
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Pregunta 4 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faq4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                        <i class="bi bi-question-circle-fill me-2"></i> ¿Cuáles son los métodos de pago?
-                    </button>
-                </h2>
-                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Aceptamos pagos mediante <strong>tarjeta de crédito/débito, PayPal y transferencia bancaria</strong>.
-                    </div>
-                </div>
+            <div class="mt-6">
+                <p class="text-sm font-bold text-black">info@wecreatebylucero.com</p>
+                <p class="text-sm text-gray-500">+507 6377-4477</p>
             </div>
         </div>
     </div>
 
-    <!-- Incluye Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Footer -->
-<footer class="bg-white text-black pt-5 pb-5 d-flex justify-content-evenly bg-footer">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-md-3 mb-2">
-                <h5>WeCreate</h5>
-                <p>Es un servicio de Desarrollo y Diseño web, creamos experiencias digitales únicas y accesibles para elevar tu marca al siguiente nivel.</p>
-            </div>
-            <div class="col-md-3 mb-2">
-                <h5>Servicios</h5>
-                <ul class="list-unstyled">
-                    <li>Desarrollo en Wordpress</li>
-                    <li>Mantenimiento de Webs</li>
-                    <li>Rediseño de Web</li>
-                    <li>Diseño a medida</li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-2">
-                <h5>Sobre Nosotros</h5>
-                <ul class="list-unstyled">
-                    <li>Planes de Diseño web</li>
-                    <li>Nuestro trabajo</li>
-                    <li>Cotizar ahora</li>
-                    <li>Certificados</li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-2">
-                <h5>Contacto</h5>
-                <p>info@wecreate.com</p>
-                <p>+507 6377-4477</p>
-                <div class="d-flex gap-2 social-icons2">
-                    <a href="https://www.facebook.com/profile.php?id=61565999865901" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/wecreate.pro/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.threads.net/@wecreate.pro" class="social-icon"><i class="fab fa-threads"></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=50763774477" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
+    <div class="max-w-7xl mx-auto mt-12 text-center text-gray-500 text-sm font-medium">
+        © 2026 WeCreate Digital Studio. Hecho con <span class="text-fuchsiaCustom">♥</span> en Panamá.
     </div>
 </footer>
-
-<div class="text-center mt-1 footer">
-    <p>@ WeCreate 2024. Todos los derechos reservados.</p>
-</div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Scripts personalizados -->
-<script src="script.js"></script>
 
 </body>
 </html>
